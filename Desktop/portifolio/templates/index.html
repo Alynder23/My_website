@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Alinda's Portfolio{% endblock %}
+
+{% block content %}
+<div class="split-container">
+    <div class="left-panel">
+        <h1>Hi, I'm Alinda! </h1>
+        <p>I am just a chill girl!</p>
+
+        <h2>About Me</h2>
+        <p>I am Alinda Tracy, a female Ugandan aged 21. I am pursuing a bachelor's degree in Computer Science,
+            currently going into my second year of study at the School of Science and Informatics Technology.</p>
+
+
+        <h3>My Hobbies:</h3>
+        <ul>
+            <li>Watching</li>
+            <li>Gaming</li>
+            <li>Music</li>
+            <li>Travelling</li>
+            <li>Reading novels</li>
+        </ul>
+    </div>
+
+    <div class="right-panel">
+        <h2>Featured Projects</h2>
+        <div class="project">
+            <h4>Project 1: Glamazon</h4>
+            <p>This is a simple easy to use online saloon app where you can make appointments at any time and place,
+                chat with the service provider and view different services tha are offered byt he saloon.</p>
+        </div>
+        <div class="project">
+            <h4>Project 2: Cornershop</h4>
+            <p>This is an online shopping website with different items including household material, electronics,
+                clothes, and many more.</p>
+        </div>
+        <a href="/projects" class="btn-cute">View More Projects</a>
+    </div>
+</div>
+{% endblock %}
