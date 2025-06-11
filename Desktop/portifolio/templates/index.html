@@ -1,41 +1,130 @@
 {% extends 'base.html' %}
-
-{% block title %}Home - Alinda's Portfolio{% endblock %}
+{% block title %}Home - Alinda Tracy{% endblock %}
 
 {% block content %}
-<div class="split-container">
-    <div class="left-panel">
-        <h1>Hi, I'm Alinda! </h1>
-        <p>I am just a chill girl!</p>
-
-        <h2>About Me</h2>
-        <p>I am Alinda Tracy, a female Ugandan aged 21. I am pursuing a bachelor's degree in Computer Science,
-            currently going into my second year of study at the School of Science and Informatics Technology.</p>
-
-
-        <h3>My Hobbies:</h3>
-        <ul>
-            <li>Watching</li>
-            <li>Gaming</li>
-            <li>Music</li>
-            <li>Travelling</li>
-            <li>Reading novels</li>
-        </ul>
-    </div>
-
-    <div class="right-panel">
-        <h2>Featured Projects</h2>
-        <div class="project">
-            <h4>Project 1: Glamazon</h4>
-            <p>This is a simple easy to use online saloon app where you can make appointments at any time and place,
-                chat with the service provider and view different services tha are offered byt he saloon.</p>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">
+                Hi, I'm <span class="highlight">Alinda Tracy</span>
+                <span class="wave">👋</span>
+            </h1>
+            <p class="hero-subtitle">Computer Science Student & Future System Analyst</p>
+            <p class="hero-description">
+                I'm a passionate 21-year-old from Uganda, currently pursuing my Bachelor's degree 
+                in Computer Science. I love creating digital solutions and inspiring others in tech!
+            </p>
+            <div class="hero-buttons">
+                <a href="/projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    View My Work
+                </a>
+                <a href="/contact" class="btn btn-secondary">
+                    <i class="fas fa-coffee"></i>
+                    Let's Chat
+                </a>
+            </div>
         </div>
-        <div class="project">
-            <h4>Project 2: Cornershop</h4>
-            <p>This is an online shopping website with different items including household material, electronics,
-                clothes, and many more.</p>
+        <div class="hero-image">
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-icon" style="--delay: 0s">💻</div>
+                    <div class="floating-icon" style="--delay: 1s">🎯</div>
+                    <div class="floating-icon" style="--delay: 2s">🚀</div>
+                </div>
+            </div>
         </div>
-        <a href="/projects" class="btn-cute">View More Projects</a>
     </div>
-</div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills-section">
+    <div class="container">
+        <h2 class="section-title">My Skills & Interests</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Programming</h3>
+                <p>Python, Flutter, Django</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-brain"></i>
+                <h3>Machine Learning</h3>
+                <p>Data Analysis, AI Projects</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Development</h3>
+                <p>Flutter Applications</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>System Analysis</h3>
+                <p>Problem Solving, Design</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hobbies Section -->
+<section class="hobbies-section">
+    <div class="container">
+        <h2 class="section-title">When I'm Not Coding</h2>
+        <div class="hobbies-grid">
+            {% for hobby in about.hobbies %}
+            <div class="hobby-item">
+                <div class="hobby-icon">
+                    {% if hobby == 'Watching' %}
+                        <i class="fas fa-tv"></i>
+                    {% elif hobby == 'Gaming' %}
+                        <i class="fas fa-gamepad"></i>
+                    {% elif hobby == 'Music' %}
+                        <i class="fas fa-music"></i>
+                    {% elif hobby == 'Travelling' %}
+                        <i class="fas fa-plane"></i>
+                    {% elif hobby == 'Reading novels' %}
+                        <i class="fas fa-book"></i>
+                    {% endif %}
+                </div>
+                <span>{{ hobby }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="featured-projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>{{ project.title }}</h3>
+                    <div class="project-tech">
+                        {% for tech in project.technologies %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <p class="project-description">{{ project.description }}</p>
+                <a href="{{ project.link }}" class="project-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center">
+            <a href="/projects" class="btn btn-outline">
+                <i class="fas fa-folder-open"></i>
+                View All Projects
+            </a>
+        </div>
+    </div>
+</section>
 {% endblock %}

@@ -1,20 +1,105 @@
 {% extends 'base.html' %}
-
-{% block title %}Contact - Alinda's Portfolio{% endblock %}
+{% block title %}Contact - Alinda Tracy{% endblock %}
 
 {% block content %}
-<div class="contact-info-page">
-    <h2>📞 Get in Touch</h2>
-    <p>You can reach out to me anytime through the following contact details:</p>
-
-    <div class="contact-details">
-        <p><strong> Location:</strong> Makerere, Kampala-Uganda</p>
-        <p><strong> Email:</strong> trustalindatracy@gmail.com</p>
-        <p><strong> Phone:</strong> +256 755 581 875 or +256 775 544 860</p>
-        <p><strong> LinkedIn:</strong> <a
-                href="https://www.linkedin.com/in/alinda-tracy-103055343?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BA1K6ANM9T7242JOgu5lfZA%3D%3D"
-                target="_blank">linkedin.com/in/alinda</a></p>
-        <p><strong> GitHub:</strong> <a href="https://github.com/Alynder23" target="_blank">github.com/alinda</a></p>
+<section class="contact-hero">
+    <div class="container">
+        <h1 class="page-title">Let's Connect!</h1>
+        <p class="page-subtitle">
+            I'd love to hear from you! Whether you want to collaborate on a project, 
+            discuss opportunities, or just say hello.
+        </p>
     </div>
-</div>
+</section>
+
+<section class="contact-content">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2>Send Me a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info-section">
+                <h2>Get In Touch</h2>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="method-info">
+                            <h3>Location</h3>
+                            <p>Makerere, Kampala<br>Uganda</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="method-info">
+                            <h3>Email</h3>
+                            <a href="mailto:trustalindatracy@gmail.com">trustalindatracy@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="method-info">
+                            <h3>Phone</h3>
+                            <p>+256 755 581 875<br>+256 775 544 860</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-links-large">
+                        <a href="https://github.com/Alynder23" target="_blank" class="social-link github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alinda-tracy-103055343" target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="availability">
+                    <div class="status-indicator">
+                        <div class="status-dot available"></div>
+                        <span>Available for opportunities</span>
+                    </div>
+                    <p>I'm currently open to internships, collaborations, and exciting projects!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

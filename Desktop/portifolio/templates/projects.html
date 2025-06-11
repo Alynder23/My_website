@@ -1,33 +1,162 @@
 {% extends 'base.html' %}
-
-{% block title %}Projects - alinda's Portfolio{% endblock %}
+{% block title %}Projects - Alinda Tracy{% endblock %}
 
 {% block content %}
-<div class="projects-page">
-    <h1>My Projects </h1>
-
-    <div class="project">
-        <h2> Glamazon</h2>
-        <p>This is a simple easy to use online saloon app where you can make appointments at any time and place,
-            chat with the service provider and view different services tha are offered byt he saloon.</p>
+<section class="projects-hero">
+    <div class="container">
+        <h1 class="page-title">My Projects</h1>
+        <p class="page-subtitle">
+            Here are some of the projects I've worked on. Each one taught me something new 
+            and helped me grow as a developer.
+        </p>
     </div>
+</section>
 
-    <div class="project">
-        <h2>Cornershop</h2>
-        <p>This is an online shopping website with different items including household material, electronics,
-            clothes, and many more.</p>
-    </div>
+<section class="projects-showcase">
+    <div class="container">
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        </div>
 
-    <div class="project">
-        <h2>My personal website</h2>
-        <p>This is a website that can tell you all about me forexamble what i do, the projects i have done, my identity
-            and contacts.</p>
-    </div>
+        <div class="projects-grid">
+            <div class="project-card-large" data-category="mobile">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-category">Mobile App</div>
+                    <h3>Glamazon</h3>
+                    <p>A comprehensive online salon booking app that allows users to schedule appointments, chat with service providers, and browse available services. Built with Flutter for cross-platform compatibility.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature">✓ Real-time chat</div>
+                        <div class="feature">✓ Appointment scheduling</div>
+                        <div class="feature">✓ Service browsing</div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="project">
-        <h2>Dementia detection ML project</h2>
-        <p>This is a system that can help people detect and differentiate between the different types of Dementia by
-            just inputing their EEG data and meta data (age, sex, gender).</p>
+            <div class="project-card-large" data-category="web">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-category">Web Application</div>
+                    <h3>Cornershop</h3>
+                    <p>A collaborative e-commerce platform developed with a team of 5 colleagues. Features a wide range of products including electronics, clothing, and household items with a user-friendly shopping experience.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature">✓ Product catalog</div>
+                        <div class="feature">✓ Shopping cart</div>
+                        <div class="feature">✓ User authentication</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-large" data-category="ml">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-category">Machine Learning</div>
+                    <h3>Dementia Detection System</h3>
+                    <p>An AI-powered system that helps detect and differentiate between different types of dementia using EEG data and patient metadata. This project combines healthcare with cutting-edge machine learning.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature">✓ EEG data analysis</div>
+                        <div class="feature">✓ Pattern recognition</div>
+                        <div class="feature">✓ Medical diagnosis support</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-large" data-category="web">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-category">Portfolio</div>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>This very website you're browsing! A responsive portfolio built with Flask to showcase my projects, skills, and journey as a Computer Science student. Features modern design and smooth animations.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature">✓ Responsive design</div>
+                        <div class="feature">✓ Modern UI/UX</div>
+                        <div class="feature">✓ Contact integration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 {% endblock %}

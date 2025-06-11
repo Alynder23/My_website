@@ -1,29 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Alinda Tracy - Portfolio{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
+    <!-- Navigation with mobile menu -->
     <nav class="navbar">
-        <div class="nav-title"><a href="/">My Portfolio</a></div>
-        <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <i class="fas fa-code"></i>
+                    Alinda Tracy
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="/" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="/about" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    About
+                </a>
+                <a href="/projects" class="nav-link">
+                    <i class="fas fa-folder-open"></i>
+                    Projects
+                </a>
+                <a href="/contact" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
-    <div class="main-content">
+    <!-- Main content -->
+    <main class="main-content">
         {% block content %}
         {% endblock %}
-    </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Alinda Tracy</h3>
+                <p>Computer Science Student & Aspiring System Analyst</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/projects">Projects</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="https://github.com/Alynder23" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alinda-tracy-103055343" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:trustalindatracy@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Alinda Tracy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu and animations -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
-
 </html>
